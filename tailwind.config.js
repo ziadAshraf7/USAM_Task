@@ -1,12 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        teal: "#04AE95",
+        darkGrey: "#4A4A4A",
+        white: "#FFFFFF",
+        Amber: "#FFB941",
+        offWhite: "#F2F2F2",
+        darkCyan: "#037C6A",
+        aqua: "#D1FAF4",
+        gray: "#777777",
+        emeraldGreen: "#024B40",
+        lavenderGray: "#B2B3CF",
+        stoneGray: "#969696",
+        softMint: "#83FCEA",
+      },
+    },
+    fontFamily: {
+      poppins: ["poppins"],
+    },
   },
   plugins: [],
-}
-
+};

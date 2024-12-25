@@ -1,8 +1,21 @@
-import { useState } from "react";
-import "./App.css";
+import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  Link,
+} from 'react-router-dom'
+
+import NavBar from './Components/Navbar'
+import { useEffect } from 'react'
 
 function App() {
-  return <h1 className="font-poppins">hello world</h1>;
+  return (
+    <>
+      <NavBar />
+    </>
+  )
 }
 
-export default App;
+export default App

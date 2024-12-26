@@ -14,6 +14,8 @@ import OurPrograms from './Components/OurPrograms'
 import ProgramDetails from './Components/ProgramDetails'
 import OverView from './Components/OverView'
 import SkillSection from './Components/SkillsSection'
+import JoinNowFooterPrimary from './Components/JoinNowFooterPrimary'
+import Registeration from './Components/Registeration'
 
 const content = {
   homePage: {
@@ -66,6 +68,8 @@ function App() {
       <ProgramDetails {...programDetails['wisePage']} />
       <OverView />
       <SkillSection />
+      <Registeration />
+      <JoinNowFooterPrimary />
       <Footer />
     </>
   )

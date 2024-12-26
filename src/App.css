@@ -37,3 +37,12 @@ h5 {
   font-size: 1.125rem; /* text-lg */
   font-weight: ;
 }
+
+
+.btn-primary {
+  @apply hover:bg-teal cursor-pointer transition duration-150 text-center text-caption md:text-body-text h-[50px] px-4 bg-darkCyan text-offWhite
+}
+
+.btn-secondary {
+  @apply hover:bg-gray cursor-pointer transition duration-150 text-center text-caption md:text-body-text h-[50px] px-4 bg-stoneGray text-offWhite
+}

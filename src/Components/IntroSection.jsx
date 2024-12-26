@@ -1,15 +1,16 @@
 import React from 'react'
-import PrimaryButton from './custom buttons/PrimaryButton'
+import {Link} from 'react-router-dom'
 
 export default function IntroSection({
   title,
   paragraph,
   buttonContent,
   imagePath,
-  buttonWidth,
+  paragraphList,
+  destination
 }) {
   return (
-    <section id="introSection" className="bg-teal h-fit lg:h-[528px] ">
+    <section id="introSection" className="bg-teal h-fit py-5 ">
       <div className="container mx-auto ">
         {/* Container */}
         <div className="flex flex-col space-y-20 text-center md:text-left items-center jsutify-center md:justify-between md:space-y-0 md:flex-row">
@@ -19,11 +20,17 @@ export default function IntroSection({
               className=" max-w-[805px] leading-[40px]  text-heading-sm md:text-heading-xl font-bold md:leading-[66px] text-white"
               dangerouslySetInnerHTML={{ __html: title }}
             ></div>
-            <p className="max-w-2xl text-offWhite text-caption md:text-subtitle-md">
+            {paragraphList?.length == 0 && <p className="max-w-2xl text-offWhite text-caption md:text-subtitle-md">
               {paragraph}
-            </p>
+            </p>}
+            {paragraphList?.length > 0 && paragraphList.map(p => {
+              return <div className='flex space-x-5'>
+                 <img className='w-[32px] h-[32px]' src={require("../imgs/check-mark 1.png")}/>
+                 <p className='text-white text-body-text'>{p}</p>
+              </div>
+            })}
             <div>
-              <PrimaryButton width={buttonWidth}>{buttonContent}</PrimaryButton>
+              <Link to={destination}><button className='btn-primary'>{buttonContent}</button></Link> 
             </div>
           </div>
 

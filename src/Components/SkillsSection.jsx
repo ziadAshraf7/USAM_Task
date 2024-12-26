@@ -4,9 +4,16 @@ import React from 'react'
 import SkillCard from './SkillCard'
 
 const skillsList = [
-    {title : "Academic Year Timeline" , infoList : ["Semester 1 (Months 1-3): Focus on AI, coding, and language skills." , "Semester 1 (Months 1-3): Focus on AI, coding, and language skills." ]}
-   , {title : "Academic Year Timeline" , infoList : ["Semester 1 (Months 1-3): Focus on AI, coding, and language skills." , "Semester 1 (Months 1-3): Focus on AI, coding, and language skills." ]}
-   , {title : "Academic Year Timeline" , infoList : ["Semester 1 (Months 1-3): Focus on AI, coding, and language skills." , "Semester 1 (Months 1-3): Focus on AI, coding, and language skills." ]}
+    {title : "Academic Year Timeline" , infoList : 
+        ["Semester 1 (Months 1-3): Focus on AI, coding, and language skills." , 
+            "Semester 2 (Months 4-6): Emphasis on entrepreneurship and marketing strategies." 
+        ]}
+   , {title : "Activities and Events" , infoList : ["Organize workshops, bootcamps, and training sessions." , 
+    "Host competitions, networking events, and guest lectures." , 
+   "Facilitate language practice and career support activities." ]}
+   , {title : "Success Measurement" , infoList : ["Monitor participation levels and feedback." , 
+    "Track internships, job placements, and project outcomes." ,
+"Conduct annual evaluations and reviews to improve program effectiveness." ]}
 
 ]
 

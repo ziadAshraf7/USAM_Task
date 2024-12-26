@@ -1,19 +1,20 @@
 import React from 'react'
 import ProgramCard from './ProgramCard'
+
 const programInfoList = [
   {
     title: 'Wise Program',
     paragraph:
       'WISE equips learners with skills through gamification, courses, and mentorship',
     imageIconPath: require('../imgs/Group 1.png'),
-    joinNowDestinationUrl: '',
+    DestinationUrl: '/USAMWise',
   },
   {
     title: 'USC Program',
     paragraph:
       'USAM Skills Club Bridging education and employment through skills, guidance, and career support.',
     imageIconPath: require('../imgs/Group 2.png'),
-    joinNowDestinationUrl: '',
+    DestinationUrl: '/USAMUsc',
   },
   {
     title: 'Spark Program',
@@ -21,7 +22,7 @@ const programInfoList = [
       'USAM SPARK empowers entrepreneurs with tools, mentorship, and sustainable growth strategies.',
     imageIconPath: require('../imgs/Group 3.png'),
 
-    joinNowDestinationUrl: '',
+    DestinationUrl: '/USAMSPark',
   },
   {
     title: 'Ambassadors Program',
@@ -29,7 +30,7 @@ const programInfoList = [
       'USAM SPARK empowers entrepreneurs with tools, mentorship, and sustainable growth strategies.',
     imageIconPath: require('../imgs/Group 4.png'),
 
-    joinNowDestinationUrl: '',
+    DestinationUrl: '/USAMAmbassador',
   },
 ]
 

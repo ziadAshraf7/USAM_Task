@@ -8,16 +8,24 @@ const list = [{
     iconImagePath : require('../imgs/skill/Frame 1261154690.png')
   } , 
   {
-    title : "Skill Development" , 
-    iconImagePath : require('../imgs/skill/Frame 1261154690.png')
+    title : "Networking Opportunities" , 
+    iconImagePath : require('../imgs/ongoing.png')
   } ,
   {
-    title : "Skill Development" , 
-    iconImagePath : require('../imgs/skill/Frame 1261154690.png')
+    title : "Exclusive Training" , 
+    iconImagePath : require('../imgs/ex-training.png')
   } ,
   {
-    title : "Skill Development" , 
-    iconImagePath : require('../imgs/skill/Frame 1261154690.png')
+    title : "Recognition and Experience" , 
+    iconImagePath : require('../imgs/experience.png')
+  } ,
+  {
+    title : "Support and Resources" , 
+    iconImagePath : require('../imgs/support and resources .png')
+  } ,
+  {
+    title : "Career Advancement" , 
+    iconImagePath : require('../imgs/career.png')
   } 
 ]
 

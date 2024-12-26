@@ -2,7 +2,6 @@
 
 import React from 'react'
 import PrimaryInput from './Custom Inputs/PrimaryInput'
-import PrimaryButton from './custom buttons/PrimaryButton'
 
 export default function Footer() {
   return (
@@ -20,10 +19,10 @@ export default function Footer() {
             {/* middle section */}
             <div className='flex flex-col items-center space-y-5'>
                 <p className='text-gray text-subtitle-lg md:text-heading-sm '>Subscribe to get our Newsletter</p>
-                <div className='flex space-x-5 items-center'>
+                <form className='flex space-x-5 items-center'>
                     <PrimaryInput />
-                    <PrimaryButton isRounded={true} >Subscripe</PrimaryButton>
-                </div>
+                    <button type='submit' className='btn-primary rounded-l-3xl rounded-r-3xl' isRounded={true} >Subscripe</button>
+                </form>
             </div>
 
             {/* bottom section */}

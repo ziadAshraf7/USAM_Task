@@ -3,74 +3,40 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
-  Link,
 } from 'react-router-dom'
 
+
+import SparkProgramPage from './Pages/SparkProgramPage'
+import HomePage from './Pages/HomePage'
 import Footer from './Components/Footer'
-import NavBar from './Components/Navbar'
-import IntroSection from './Components/IntroSection'
-import OurPrograms from './Components/OurPrograms'
-import ProgramDetails from './Components/ProgramDetails'
-import OverView from './Components/OverView'
-import SkillSection from './Components/SkillsSection'
-import JoinNowFooterPrimary from './Components/JoinNowFooterPrimary'
-import Registeration from './Components/Registeration'
-
-const content = {
-  homePage: {
-    title:
-      "Explore <span class='text-amber'> USAM's Unique Programs </span>  Empowering Skills, Leadership, <br/> and Professional Growth.",
-
-    paragraph:
-      'With WISE, SPARK, USAM Scales Club, and USAM Ambassador, unlock your potential to excel in learning, working, and leading.',
-
-    buttonContent: 'Explore Our Programs',
-
-    imagePath: require('./imgs/Happy student.png'),
-
-    buttonWidth: '263',
-  },
-}
-
-
-const programDetails = {
- wisePage : {
-    title : "Wise Core and value" , 
-    list : [{
-      title : "Skill Development" , 
-      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
-    } , 
-    {
-      title : "Skill Development" , 
-      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
-    } ,
-    {
-      title : "Skill Development" , 
-      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
-    } ,
-    {
-      title : "Skill Development" , 
-      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
-    } 
-  ] ,
-    backgroundIconPath : require('./imgs/wise.png')
-  }
-}
-
+import Navbar from './Components/Navbar'
+import WiseProgramPage from './Pages/WiseProgramPage'
+import AmbassadorsProgramPage from './Pages/AmbassadorsProgramPage'
+import UscProgramPage from './Pages/UscProgramPage'
+import UscProgramRegisterationPage from './Pages/UscProgramRegisterationPage'
+import WiseProgramRegisterationPage from './Pages/WiseProgramRegisterationPage'
+import SparkProgramRegisterationPage from './Pages/SparkProgramRegisterationPage'
+import AmbassadorProgramRegisterationPage from './Pages/AmbassadorProgramRegisterationPage'
 
 function App() {
   return (
     <>
-      <NavBar />
-      <IntroSection {...content['homePage']} />
-      <OurPrograms />
-      <ProgramDetails {...programDetails['wisePage']} />
-      <OverView />
-      <SkillSection />
-      <Registeration />
-      <JoinNowFooterPrimary />
+   <Router>
+     <Navbar />
+        <Routes>
+          <Route path='/' element= {<HomePage />} />
+          <Route path='/USAMWise' element = {<WiseProgramPage />} />
+          <Route path='/USAMSPark' element = {<SparkProgramPage />} />
+          <Route  path='/USAMAmbassador' element = {<AmbassadorsProgramPage />} />
+          <Route  path='/USAMUsc' element = {<UscProgramPage />} />
+          <Route  path='/AmbassadorProgramRegisteration' element = {<AmbassadorProgramRegisterationPage />} />
+          <Route  path='/SparkProgramRegisteration' element = {<SparkProgramRegisterationPage />} />
+          <Route  path='/WiseProgramRegisteration' element = {<WiseProgramRegisterationPage />} />
+          <Route  path='/UscProgramRegisteration' element = {<UscProgramRegisterationPage />} />
+        </Routes>
       <Footer />
+    </Router>
+
     </>
   )
 }

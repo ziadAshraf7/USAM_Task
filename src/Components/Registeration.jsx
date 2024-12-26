@@ -8,7 +8,7 @@ export default function Registeration() {
             {/* upper intro section  */}
             <div className='flex flex-col space-y-5'>
                 <span className='text-subtitle-lg md:text-[24px] text-teal '>Registration Wise program </span>
-                <p className='text-caption text-caption text-darkGrey'>Don't miss the chance to join wise program, where excellence meets creativity and you can experience something truly unique.</p>
+                <p className='text-caption  text-darkGrey'>Don't miss the chance to join wise program, where excellence meets creativity and you can experience something truly unique.</p>
             </div>
 
             {/* form section */}

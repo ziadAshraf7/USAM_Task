@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import MenuItemsBar from './MenuItemsBar'
-
+import {
+ 
+  Link,
+} from 'react-router-dom'
 export default function Navbar() {
   const listsContent = ['Home', 'About', 'News', 'Events']
 
@@ -23,9 +26,10 @@ export default function Navbar() {
 
           <ul className="hidden md:flex md:space-x-10 lg:space-x-20 text-darkGrey">
             {listsContent.map((liContent) => (
-              <li className="cursor-pointer font-bold text-darkGrey text-subtitle-md hover:text-gray transition duration-100">
+              <Link to = "/"><li className="cursor-pointer font-bold text-darkGrey text-subtitle-md hover:text-gray transition duration-100">
                 {liContent}
               </li>
+              </Link>
             ))}
             <li className=" text-white text-subtitle-md">USAM Programs</li>
           </ul>

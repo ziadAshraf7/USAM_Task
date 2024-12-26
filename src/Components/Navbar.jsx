@@ -7,8 +7,8 @@ export default function Navbar() {
   let [displayMenuItemsBar, setDisplayMenuItemsBar] = useState(false)
 
   return (
-    <nav id="navbar" className="relative bg-teal h-[188px]">
-      <div className="container mx-auto p-6">
+    <nav id="navbar" className="relative bg-teal h-[188px] p-10">
+      <div className="container mx-auto ">
         <div className="flex flex-row items-center justify-between">
           {/* image icon */}
           <div>
@@ -23,7 +23,7 @@ export default function Navbar() {
 
           <ul className="hidden md:flex md:space-x-10 lg:space-x-20 text-darkGrey">
             {listsContent.map((liContent) => (
-              <li className="cursor-pointer text-darkGrey text-[18px]">
+              <li className="cursor-pointer font-bold text-darkGrey text-[18px]">
                 {liContent}
               </li>
             ))}

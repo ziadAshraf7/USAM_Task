@@ -7,7 +7,7 @@ export default {
         teal: '#04AE95',
         darkGrey: '#4A4A4A',
         white: '#FFFFFF',
-        Amber: '#FFB941',
+        amber: '#FFB941',
         offWhite: '#F2F2F2',
         darkCyan: '#037C6A',
         aqua: '#D1FAF4',

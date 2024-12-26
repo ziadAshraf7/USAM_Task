@@ -54,7 +54,6 @@
     }
   },
   "devDependencies": {
-    "@types/react-window": "^1.8.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest-dom": "^4.0.2",
     "msw": "^0.44.2",

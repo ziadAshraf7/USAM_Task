@@ -23,11 +23,11 @@ export default function Navbar() {
 
           <ul className="hidden md:flex md:space-x-10 lg:space-x-20 text-darkGrey">
             {listsContent.map((liContent) => (
-              <li className="cursor-pointer font-bold text-darkGrey text-[18px]">
+              <li className="cursor-pointer font-bold text-darkGrey text-subtitle-md hover:text-gray transition duration-100">
                 {liContent}
               </li>
             ))}
-            <li className=" text-white text-[18px]">USAM Programs</li>
+            <li className=" text-white text-subtitle-md">USAM Programs</li>
           </ul>
 
           {/* langauage selection */}

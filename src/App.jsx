@@ -7,9 +7,13 @@ import {
   Link,
 } from 'react-router-dom'
 
+import Footer from './Components/Footer'
 import NavBar from './Components/Navbar'
-import { useEffect } from 'react'
 import IntroSection from './Components/IntroSection'
+import OurPrograms from './Components/OurPrograms'
+import ProgramDetails from './Components/ProgramDetails'
+import OverView from './Components/OverView'
+import SkillSection from './Components/SkillsSection'
 
 const content = {
   homePage: {
@@ -27,11 +31,42 @@ const content = {
   },
 }
 
+
+const programDetails = {
+ wisePage : {
+    title : "Wise Core and value" , 
+    list : [{
+      title : "Skill Development" , 
+      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
+    } , 
+    {
+      title : "Skill Development" , 
+      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
+    } ,
+    {
+      title : "Skill Development" , 
+      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
+    } ,
+    {
+      title : "Skill Development" , 
+      iconImagePath : require('./imgs/skill/Frame 1261154690.png')
+    } 
+  ] ,
+    backgroundIconPath : require('./imgs/wise.png')
+  }
+}
+
+
 function App() {
   return (
     <>
       <NavBar />
       <IntroSection {...content['homePage']} />
+      <OurPrograms />
+      <ProgramDetails {...programDetails['wisePage']} />
+      <OverView />
+      <SkillSection />
+      <Footer />
     </>
   )
 }

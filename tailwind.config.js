@@ -16,10 +16,22 @@ export default {
         lavenderGray: '#B2B3CF',
         stoneGray: '#969696',
         softMint: '#83FCEA',
+        brightAqua: '#1FFAD9 ',
+        staleBlue : "#626381"
       },
     },
     fontFamily: {
       poppins: ['poppins'],
+    },
+    fontSize: {
+      'heading-xl': '44px',
+      'heading-lg': '40px',
+      'heading-md': '28px',
+      'heading-sm': '26px',
+      'subtitle-lg': '22px',
+      'subtitle-md': '18px',
+      'body-text': '16px',
+      'caption': '14px',
     },
   },
   plugins: [],

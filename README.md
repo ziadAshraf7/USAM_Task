@@ -101,7 +101,7 @@ Before starting, ensure you have the following installed on your machine:
 
 1. Ensure that both the frontend and backend servers are running simultaneously.
 2. Access the frontend at `http://localhost:3000` to view and register for programs.
-3. The backend API is accessible at `http://localhost:5000` for handling program data and registrations.
+3. The backend API is accessible at `http://localhost:4000` for handling program data and registrations.
 
 
 

@@ -10,7 +10,7 @@ export default function SparkProgramRegisterationPage() {
         }, []);
   return (
     <section id='sparkRegestration'>
-      <Regestration />
+      <Regestration programType={"spark"}/>
     </section>
   )
 }

@@ -1,6 +1,48 @@
-import React from 'react'
-import PrimaryButton from './custom buttons/PrimaryButton'
-export default function Registeration() {
+import React, { useState } from 'react'
+import {backEndUrlPath} from "../utils.js"
+import ErrorComponent from './ErrorComponent.jsx';
+import { useNavigate } from "react-router-dom";
+
+export default function Registeration({
+    programType
+}) {
+
+    let [firstName , setFirstName] = useState("");
+    let [lastName , setLastName] = useState("");
+    let [email , setEmail] = useState("");
+    let [whatsUpNumber , setWhatsUpNumber] = useState("")
+    let [errMessage , setErrMessage] = useState("")
+
+    const navigate = useNavigate();
+
+    async function submitRegisteration(e){
+        e.preventDefault()
+      
+        whatsUpNumber = new String(whatsUpNumber.toString().slice(1)) 
+        
+        const registerationData = {firstName , lastName , email , whatsUpNumber , programType}
+
+        const response = await fetch(backEndUrlPath + "/api/usamRegisteration/register" , {
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify(registerationData), 
+          });
+
+
+          if(response.ok){
+            setErrMessage("")
+            navigate('../success')
+          }else{
+            console.error("Error:", response.status, response.statusText);
+            const errorResponse = await response.json();
+            setErrMessage(errorResponse)
+            console.error("Error Details:", errorResponse);
+          }
+
+    }
+
   return (
     <section id='form'>
       <div className='container mx-auto p-20'>
@@ -12,27 +54,27 @@ export default function Registeration() {
             </div>
 
             {/* form section */}
-            <form >
+            <form onSubmit={submitRegisteration}>
                 <div className='flex flex-col space-y-10'>
 
                 <div className='flex space-x-5 '>
                     <div className='flex flex-col space-y-2 w-1/2 '>
                         <span className='text-darkGrey text-body-text'>First Name</span>
-                        <input required className=' h-[40px] md:h-[68px] bg-offWhite p-5 -softMint focus:outline-softMint' type='text' />
+                        <input onChange={(e) => setFirstName(e.target.value)} value={firstName} required className=' h-[40px] md:h-[68px] bg-offWhite p-5 -softMint focus:outline-softMint' type='text' />
                     </div>
                     <div className='flex flex-col space-y-2 w-1/2'>
                         <span className='text-darkGrey text-body-text'>Last Name</span>
-                        <input required className='border-softMint h-[40px] md:h-[68px] p-5 bg-offWhite focus:outline-softMint' type='text' />
+                        <input onChange={(e) => setLastName(e.target.value)} value={lastName} required className='border-softMint h-[40px] md:h-[68px] p-5 bg-offWhite focus:outline-softMint' type='text' />
                     </div>
                 </div>
 
                     <div className='flex flex-col space-y-2'>
                             <span className='text-darkGrey text-body-text'>Email<span className='text-red-600'>*</span></span>
-                            <input required className='border-softMint h-[40px] md:h-[68px]  p-5 bg-offWhite focus:outline-softMint' type='text' />
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} required className='border-softMint h-[40px] md:h-[68px]  p-5 bg-offWhite focus:outline-softMint' type='text' />
                         </div>
                     <div className='flex flex-col space-y-2'>
                         <span className='text-darkGrey text-body-text'>Whatsup Number</span>
-                        <input required className='border-softMint h-[40px] md:h-[68px]  p-5 bg-offWhite focus:outline-softMint' type='number' />
+                        <input onChange={(e) => setWhatsUpNumber(e.target.value)} value={whatsUpNumber} required className='border-softMint h-[40px] md:h-[68px]  p-5 bg-offWhite focus:outline-softMint' type='number' />
                     </div>
 
 
@@ -42,6 +84,11 @@ export default function Registeration() {
                         </div>
                  </div>
             </form>
+
+           {errMessage.length > 0 && <div className='flex justify-center'>
+             <ErrorComponent errorMessage={errMessage} />
+            </div>}
+
         </div>
       </div>
     </section>

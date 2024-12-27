@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom'
-
+import NotFoundPage from "./Components/NotFound"
 
 import SparkProgramPage from './Pages/SparkProgramPage'
 import HomePage from './Pages/HomePage'
@@ -17,6 +17,7 @@ import UscProgramRegisterationPage from './Pages/UscProgramRegisterationPage'
 import WiseProgramRegisterationPage from './Pages/WiseProgramRegisterationPage'
 import SparkProgramRegisterationPage from './Pages/SparkProgramRegisterationPage'
 import AmbassadorProgramRegisterationPage from './Pages/AmbassadorProgramRegisterationPage'
+import SuccessSection from './Components/SuccessSection'
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           <Route  path='/SparkProgramRegisteration' element = {<SparkProgramRegisterationPage />} />
           <Route  path='/WiseProgramRegisteration' element = {<WiseProgramRegisterationPage />} />
           <Route  path='/UscProgramRegisteration' element = {<UscProgramRegisterationPage />} />
+          <Route path='/success' element = {<SuccessSection />} />
+          <Route path='*' element= {<NotFoundPage />} />
         </Routes>
       <Footer />
     </Router>

@@ -9,7 +9,7 @@ export default function UscProgramRegisterationPage() {
     }, []);
   return (
     <section id='uscRegestration'>
-      <Regestration />
+      <Regestration programType={"usc"}/>
     </section>
   )
 }

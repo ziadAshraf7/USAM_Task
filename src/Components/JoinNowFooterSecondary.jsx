@@ -11,7 +11,7 @@ export default function JoinNowFooterPrimary({
       <div className='container mx-auto p-5'>
         <div className='flex text-center flex-col space-y-10 items-center'>
             <p dangerouslySetInnerHTML={{ __html: title }} className='text-heading-md text-teal font-bold md:text-heading-lg max-w-6xl'></p>
-            <Link to={destination}><button className='btn-primary'>Join Now</button></Link>
+            <Link to={destination}><button className='btn-primary' style={{width : "250px"}}>Join Now</button></Link>
         </div>
       </div>
     </section>

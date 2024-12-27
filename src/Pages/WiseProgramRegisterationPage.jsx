@@ -10,7 +10,7 @@ export default function WiseProgramRegisterationPage() {
       }, []);
   return (
     <section id='wiseRegestration'>
-      <Regestration />
+      <Regestration programType={"wise"} />
     </section>
   )
 }

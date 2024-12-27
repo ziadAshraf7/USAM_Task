@@ -10,7 +10,7 @@ export default function AmbassadorProgramRegisterationPage() {
   }, []);
   return (
     <section id='ambassadorRegestration'>
-      <Regestration />
+      <Regestration programType={"ambassador"}/>
     </section>
   )
 }

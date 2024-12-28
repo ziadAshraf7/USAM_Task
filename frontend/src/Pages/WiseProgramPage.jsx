@@ -5,6 +5,8 @@ import IntroSection from '../Components/IntroSection'
 import ProgramDetails from '../Components/ProgramDetails'
 import JoinNowFooterPrimary from '../Components/JoinNowFooterPrimary'
 import { useEffect } from 'react'
+import {registerationFormsPath} from "../utils"
+
 const programDetails = {
     wisePage : {
        title : "Wise Core and value" , 
@@ -32,7 +34,6 @@ const programDetails = {
        backgroundIconPath : require('../imgs/wise.png')
      }
    }
-   const joinNowDestination = "/WiseProgramRegisteration"
 
    const content = {
     wisePage: {
@@ -45,7 +46,7 @@ const programDetails = {
   
       imagePath: require('../imgs/Collab-bro.png'),
        
-      destination : joinNowDestination
+      destination : registerationFormsPath["wiseProgram"]
     },
   }
 
@@ -57,7 +58,7 @@ export default function WiseProgramPage() {
     <section id='wiseProgramPage'>
       <IntroSection {...content['wisePage']}/>
       <ProgramDetails {...programDetails['wisePage']} />
-      <JoinNowFooterPrimary destination={joinNowDestination} />
+      <JoinNowFooterPrimary destination={registerationFormsPath["wiseProgram"]} />
     </section>
   )
 }

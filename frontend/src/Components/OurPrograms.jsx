@@ -1,5 +1,6 @@
 import React from 'react'
 import ProgramCard from './ProgramCard'
+import {appPaths} from "../utils"
 
 const programInfoList = [
   {
@@ -7,14 +8,14 @@ const programInfoList = [
     paragraph:
       'WISE equips learners with skills through gamification, courses, and mentorship',
     imageIconPath: require('../imgs/Group 1.png'),
-    DestinationUrl: '/USAMWise',
+    DestinationUrl: `${appPaths["wiseProgram"]}`,
   },
   {
     title: 'USC Program',
     paragraph:
       'USAM Skills Club Bridging education and employment through skills, guidance, and career support.',
     imageIconPath: require('../imgs/Group 2.png'),
-    DestinationUrl: '/USAMUsc',
+    DestinationUrl: `${appPaths["uscProgram"]}`,
   },
   {
     title: 'Spark Program',
@@ -22,7 +23,7 @@ const programInfoList = [
       'USAM SPARK empowers entrepreneurs with tools, mentorship, and sustainable growth strategies.',
     imageIconPath: require('../imgs/Group 3.png'),
 
-    DestinationUrl: '/USAMSPark',
+    DestinationUrl: `${appPaths["sparkProgram"]}`,
   },
   {
     title: 'Ambassadors Program',
@@ -30,7 +31,7 @@ const programInfoList = [
       'USAM SPARK empowers entrepreneurs with tools, mentorship, and sustainable growth strategies.',
     imageIconPath: require('../imgs/Group 4.png'),
 
-    DestinationUrl: '/USAMAmbassador',
+    DestinationUrl: `${appPaths["ambassadorsProgram"]}`,
   },
 ]
 

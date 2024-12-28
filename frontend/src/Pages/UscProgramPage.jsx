@@ -6,6 +6,7 @@ import ProgramDetails from '../Components/ProgramDetails'
 import JoinNowFooterSecondary from '../Components/JoinNowFooterSecondary'
 import SkillsSection from '../Components/SkillsSection'
 import { useEffect } from 'react'
+import {registerationFormsPath} from "../utils"
 
 
 const programDetails = {
@@ -32,7 +33,6 @@ const programDetails = {
      }
    }
 
-   const joinNowDestination = "/UscProgramRegisteration"
 
    const content = {
     UscProgram: {
@@ -48,7 +48,7 @@ const programDetails = {
   
       imagePath: require('../imgs/Time management-amico 1.png'),
   
-      destination : joinNowDestination
+      destination : registerationFormsPath["uscProgram"]
     },
   }
 
@@ -62,7 +62,7 @@ export default function UscProgramPage() {
       <ProgramDetails {...programDetails['UscProgram']} />
       <SkillsSection />
          <JoinNowFooterSecondary 
-            destination={joinNowDestination}
+            destination={registerationFormsPath["uscProgram"]}
             title = {"Don’t miss the opportunity and join to <span class ='text-amber'>USC</span>  Program now!"}
             />
     </section>

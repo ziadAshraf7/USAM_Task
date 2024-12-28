@@ -4,6 +4,7 @@ import IntroSection from '../Components/IntroSection'
 import ProgramDetails from '../Components/ProgramDetails'
 import JoinNowFooterPrimary from '../Components/JoinNowFooterPrimary'
 import { useEffect } from 'react'
+import {registerationFormsPath} from "../utils"
 
 const programDetails = {
     sparkProgram : {
@@ -37,7 +38,6 @@ const programDetails = {
        backgroundIconPath : require('../imgs/Personal goals-pana.png')
      }
    }
-   const joinNowDestination = "/SparkProgramRegisteration"
 
    const content = {
     sparkProgram: {
@@ -49,7 +49,7 @@ const programDetails = {
       buttonContent: 'Join Now',
   
       imagePath: require('../imgs/Learning-bro.png'),
-      destination : joinNowDestination
+      destination : registerationFormsPath["sparkProgram"]
   
     },
   }
@@ -62,7 +62,7 @@ export default function SparkProgramPage() {
     <section id='sparkProgram'>
       <IntroSection {...content['sparkProgram']}/>
       <ProgramDetails {...programDetails['sparkProgram']} />
-      <JoinNowFooterPrimary  destination={joinNowDestination}/>
+      <JoinNowFooterPrimary  destination={registerationFormsPath["sparkProgram"]}/>
     </section>
   )
 }

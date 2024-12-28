@@ -1,8 +1,12 @@
 
 
 import React from 'react'
+import { useEffect } from 'react';
 
 export default function SuccessSection() {
+   useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <section id='success'>
       <div className='container mx-auto p-20'>

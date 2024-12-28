@@ -6,6 +6,7 @@ import ProgramDetails from '../Components/ProgramDetails'
 import JoinNowFooterSecondary from '../Components/JoinNowFooterSecondary'
 import Overview from '../Components/OverView'
 import { useEffect } from 'react'
+import {registerationFormsPath} from "../utils"
 
 
 const programDetails = {
@@ -34,8 +35,6 @@ const programDetails = {
    }
 
 
-   const joinNowDestination = "/AmbassadorProgramRegisteration"
-
    const content = {
     AmbassadorsProgram: {
       title:
@@ -47,7 +46,7 @@ const programDetails = {
   
       imagePath: require('../imgs/Ambassador-pana 1.png'),
       
-      destination : joinNowDestination
+      destination : registerationFormsPath["ambassadorsProgram"]
     },
   }
 
@@ -61,7 +60,7 @@ export default function AmbassadorsProgramPage() {
       <ProgramDetails {...programDetails['AmbassadorsProgram']} />
       <Overview />
       <JoinNowFooterSecondary 
-      destination={joinNowDestination}
+      destination={registerationFormsPath["ambassadorsProgram"]}
       title = {"Don’t miss the opportunity and join to <span class ='text-amber'>Ambassadors</span>  Program now!"}
       />
     </section>
